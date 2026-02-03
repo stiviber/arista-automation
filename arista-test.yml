@@ -4,7 +4,9 @@
   gather_facts: no
   tasks:
     - name: Show version on the switch
-      ansible.builtin.command: show version
+      arista.eos.eos_command:
+        commands:
+          - show version
       register: result
 
     - name: Display the output
