@@ -12,4 +12,8 @@
     - name: Display the output
       debug:
         var: result.stdout_lines
+- name: Set hostname
+  arista.eos.eos_config:
+    lines:
+      - hostname LAB-SW1
 
