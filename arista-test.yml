@@ -2,6 +2,7 @@
 - name: Test Arista Switch Connection
   hosts: switch1
   gather_facts: no
+
   tasks:
     - name: Show version on the switch
       arista.eos.eos_command:
@@ -12,8 +13,9 @@
     - name: Display the output
       debug:
         var: result.stdout_lines
-- name: Set hostname
-  arista.eos.eos_config:
-    lines:
-      - hostname LAB-SW1
+
+    - name: Set hostname
+      arista.eos.eos_config:
+        lines:
+          - hostname LAB-SW1
 
