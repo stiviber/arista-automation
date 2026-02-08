@@ -22,9 +22,6 @@
       arista.eos.eos_config:
         lines:
           - hostname LAB-SW1
-    - name: Set router bgp conf 
-      arista.eos.eos.eos_config:
-      lines:
           - router bgp 500
 
 
