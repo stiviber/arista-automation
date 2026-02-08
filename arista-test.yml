@@ -8,18 +8,23 @@
     ansible_become_method: enable
 
   tasks:
-    - name: Show version on the switch
-      arista.eos.eos_command:
-        commands:
-          - show version
-      register: result
+   ## - name: Show version on the switch
+     # arista.eos.eos_command:
+      #  commands:
+       #   - show version
+    #  register: result
 
-    - name: Display the output
-      debug:
-        var: result.stdout_lines
+    #- name: Display the output
+     # debug:
+      #  var: result.stdout_lines
 
     - name: Set hostname
       arista.eos.eos_config:
         lines:
           - hostname LAB-SW1
+    - name: Set router bgp conf 
+      arista.eos.eos.eos_config:
+      lines:
+          - router bgp 500
+
 
