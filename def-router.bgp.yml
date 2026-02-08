@@ -12,12 +12,12 @@
       arista.eos.eos_config:
         lines:
           - router bgp 6503
-          -   router-id 10.10.10.2
-          -   distance bgp 20 200 200
-          -   neighbor 10.10.10.1 remote-as 6501
-          -   neighbor 10.10.13.2 remote-as 6503
-          -   network 5.5.5.0/24
-          -   redistribute connected
+          -  router-id 10.10.10.2
+          -  distance bgp 20 200 200
+          -  neighbor 10.10.10.1 remote-as 6501
+          -  neighbor 10.10.13.2 remote-as 6503
+          -  network 5.5.5.0/24
+          -  redistribute connected
 
 
 
