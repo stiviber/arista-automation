@@ -7,7 +7,7 @@
     ansible_become: yes
     ansible_become_method: enable
 
-tasks:
+  tasks:
    ## - name: Show version on the switch
      # arista.eos.eos_command:
       #  commands:
