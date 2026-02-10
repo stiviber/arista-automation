@@ -22,7 +22,8 @@
       arista.eos.eos_config:
         lines:
           - hostname LAB-SW1
-          - router bgp 400
+          - no router bgp
+          - router bgp 4000
           -  router-id 10.10.10.2
           -  distance bgp 20 200 200
           -  neighbor 10.10.10.1 remote-as 6501
