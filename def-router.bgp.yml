@@ -8,10 +8,21 @@
     ansible_become_method: enable
 
   tasks:
+   ## - name: Show version on the switch
+     # arista.eos.eos_command:
+      #  commands:
+       #   - show version
+    #  register: result
+
+    #- name: Display the output
+     # debug:
+      #  var: result.stdout_lines
+
     - name: Set hostname
       arista.eos.eos_config:
         lines:
-          - router bgp 6503
+          - hostname LAB-SW1
+          - router bgp 500
           -  router-id 10.10.10.2
           -  distance bgp 20 200 200
           -  neighbor 10.10.10.1 remote-as 6501
